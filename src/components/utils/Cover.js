@@ -10,14 +10,14 @@ const Cover = ({ name, login, coverImg }) => {
         style={{ background: "#000", minHeight: "100vh" }}
       >
         <div className="mt-auto text-light mb-5">
-          <div
+          {/* <div
             className=" ratio ratio-1x1 mx-auto mb-2"
             style={{ maxWidth: "320px" }}
           >
             <img src={coverImg} alt="" />
-          </div>
-          <h1>{name}</h1>
-          <p>Please connect your wallet to continue.</p>
+          </div> */}
+          <h1 className="text-body">{name}</h1>
+          <p className="text-secondary">Please connect your wallet to continue.</p>
           <Button
             onClick={login}
             variant="outline-light"

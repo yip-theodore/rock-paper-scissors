@@ -1,5 +1,16 @@
 {
+  "scripts": {
+    "dev:deploy": "yarn asb && near dev-deploy build/release/smartcontract.wasm",
+    "dev:setup": "export $(cat ./neardev/dev-account.env) && near create-account player.${CONTRACT_NAME} --masterAccount ${CONTRACT_NAME} --initialBalance 5",
+    "dev:play": "export $(cat ./neardev/dev-account.env) && near call ${CONTRACT_NAME} play '{\"p\": 0}' --depositYocto=100000000000000000000000 --accountId=player.${CONTRACT_NAME}",
+    "dev:history": "export $(cat ./neardev/dev-account.env) && near view ${CONTRACT_NAME} getHistory",
+    "auth": "near login",
+    "setup": "near create-account rock-paper-scissors.yip-theodore.testnet --masterAccount yip-theodore.testnet --initialBalance 10",
+    "deploy": "yarn asb && near deploy --accountId=rock-paper-scissors.yip-theodore.testnet --wasmFile=build/release/smartcontract.wasm"
+  },
   "devDependencies": {
+    "near-cli": "^3.2.0",
     "near-sdk-as": "^3.2.3"
-  }
+  },
+  "license": "MIT"
 }

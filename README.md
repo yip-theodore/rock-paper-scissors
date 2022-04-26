@@ -1,4 +1,4 @@
-The app is hosted here: [https://dacadeorg.github.io/near-marketplace-dapp/](https://dacadeorg.github.io/near-marketplace-dapp/)
+The app is hosted here: [https://yip-theodore.github.io/rock-paper-scissors/](https://yip-theodore.github.io/rock-paper-scissors/)
 
 # Getting Started with Create React App
 
