@@ -1,0 +1,13 @@
+type Game @entity {
+  id: ID!
+  from: Player!
+  played: Int!
+  result: String!
+  bet: BigInt!
+  timestamp: BigInt!
+}
+
+type Player @entity {
+  id: ID!
+  games: [Game!] @derivedFrom(field: "from")
+}

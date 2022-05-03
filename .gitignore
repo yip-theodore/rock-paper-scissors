@@ -8,3 +8,5 @@ smartcontract/node_modules
 
 neardev
 .env
+generated
+.DS_Store
