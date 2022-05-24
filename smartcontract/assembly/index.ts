@@ -8,7 +8,7 @@ function _random32(): u32 {
 
 export function play(p: u32): string {
     if (context.attachedDeposit > u128.from('1000000000000000000000000')) {
-        throw new Error('incorrect deposit')
+        throw new Error('incorrect deposit: cannot deposit more that 1Near')
     }
     const c = _random32() % 3
     if (p == c) {
